@@ -7,14 +7,12 @@
     "build": "bash build.sh",
     "prebuild:linux": "npm i -g pkg",
     "build:linux": "pkg v3.js --targets node16-linux-x64 --output bin/cpustatx-linux",
+    "build:linux-arm": "pkg v3.js --targets node16-linux-arm64 --output bin/cpustatx-linux-arm",
     "build:macos": "pkg v3.js --targets node16-macos-x64 --output bin/cpustatx-macos",
     "build:macos-arm": "pkg v3.js --targets node16-macos-arm64 --output bin/cpustatx-macos-arm",
     "build:win": "pkg v3.js --targets node16-win-x64 --output bin/cpustatx-win64",
-    "build:all": "npm run build:linux && npm run build:macos && npm run build:macos-arm && npm run build:win"
+    "build:all": "npm run build:linux && npm run build:linux-arm && npm run build:macos && npm run build:macos-arm && npm run build:win"
   },
   "author": "soumya mondal",
-  "license": "ISC",
-  "dependencies": {
-    "cli-table3": "^0.6.5"
-  }
+  "license": "ISC"
 }
